@@ -148,12 +148,8 @@ export default {
   },
   mounted(){
     this.getTabelData()
-    // this.userInfomation = this.$store.state.userInfo.userInfo
   },
   methods: {
-    // ...mapMutations(['SET_USERINFO']),
-    // getInfo(){
-    // },
     search(){
       console.log(this.searchForm)
     },

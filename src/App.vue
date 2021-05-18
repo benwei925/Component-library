@@ -8,6 +8,7 @@
       :default-active="activeIndex"
       router
     >
+      <div class="menu-header">组件库</div>
       <NavMenu :navMenus="menuData"></NavMenu>
     </el-menu>
     <div class="mainBox">
@@ -41,7 +42,7 @@ export default {
         },
         {
           entity: {
-            id: 20,
+            id: 1,
             name: "dataAnalysis",
             icon: "el-icon-s-data",
             alias: "数据分析",
@@ -50,113 +51,122 @@ export default {
         },
         {
           entity: {
-            id: 1,
-            name: "systemManagement",
-            icon: "el-icon-s-custom",
-            alias: "系统管理",
+            id: 2,
+            name: "demoPage",
+            icon: "el-icon-s-operation",
+            alias: "组件示例",
+            value: { path: "/demoPage" },
           },
-          childs: [
-            {
-              entity: {
-                id: 3,
-                name: "userManagement",
-                icon: "el-icon-user",
-                alias: "用户管理",
-                value: { path: "/hello" },
-              },
-            },
-            {
-              entity: {
-                id: 4,
-                name: "roleManagement",
-                icon: "el-icon-user-solid",
-                alias: "角色管理",
-                value: "/system/role",
-              },
-            }
-          ],
         },
-        {
-          //一级
-          entity: {
-            id: 6,
-            name: "userManage",
-            icon: "el-icon-news",
-            alias: "宠物信息管理",
-          },
-          //二级
-          childs: [
-            {
-              entity: {
-                id: 7,
-                name: "accountManage",
-                icon: "el-icon-phone-outline\r\n",
-                alias: "帐号管理",
-                value: "",
-              },
-              //三级
-              childs: [
-                {
-                  entity: {
-                    id: 14,
-                    name: "emailManage",
-                    icon: "el-icon-sold-out\r\n",
-                    alias: "邮箱管理",
-                    value: "/content/email",
-                  },
-                },
-                {
-                  entity: {
-                    id: 13,
-                    name: "passManage",
-                    icon: "el-icon-service\r\n",
-                    alias: "密码管理",
-                    value: "/content/pass",
-                  },
-                },
-              ],
-            },
-            {
-              entity: {
-                id: 8,
-                name: "integralManage",
-                icon: "el-icon-picture",
-                alias: "积分管理",
+        // {
+        //   entity: {
+        //     id: 1,
+        //     name: "systemManagement",
+        //     icon: "el-icon-s-custom",
+        //     alias: "系统管理",
+        //   },
+        //   childs: [
+        //     {
+        //       entity: {
+        //         id: 3,
+        //         name: "userManagement",
+        //         icon: "el-icon-user",
+        //         alias: "用户管理",
+        //         value: { path: "/hello" },
+        //       },
+        //     },
+        //     {
+        //       entity: {
+        //         id: 4,
+        //         name: "roleManagement",
+        //         icon: "el-icon-user-solid",
+        //         alias: "角色管理",
+        //         value: "/system/role",
+        //       },
+        //     }
+        //   ],
+        // },
+        // {
+        //   //一级
+        //   entity: {
+        //     id: 6,
+        //     name: "userManage",
+        //     icon: "el-icon-news",
+        //     alias: "宠物信息管理",
+        //   },
+        //   //二级
+        //   childs: [
+        //     {
+        //       entity: {
+        //         id: 7,
+        //         name: "accountManage",
+        //         icon: "el-icon-phone-outline\r\n",
+        //         alias: "帐号管理",
+        //         value: "",
+        //       },
+        //       //三级
+        //       childs: [
+        //         {
+        //           entity: {
+        //             id: 14,
+        //             name: "emailManage",
+        //             icon: "el-icon-sold-out\r\n",
+        //             alias: "邮箱管理",
+        //             value: "/content/email",
+        //           },
+        //         },
+        //         {
+        //           entity: {
+        //             id: 13,
+        //             name: "passManage",
+        //             icon: "el-icon-service\r\n",
+        //             alias: "密码管理",
+        //             value: "/content/pass",
+        //           },
+        //         },
+        //       ],
+        //     },
+        //     {
+        //       entity: {
+        //         id: 8,
+        //         name: "integralManage",
+        //         icon: "el-icon-picture",
+        //         alias: "积分管理",
 
-                value: "/user/integral",
-              },
-            },
-          ],
-        },
-        {
-          entity: {
-            id: 22,
-            name: "留言反馈",
-            icon: "el-icon-s-custom",
-            alias: "留言反馈",
-            value: { path: "/feedbackMessage" },
-          },
-          childs: [
-            {
-              entity: {
-                id: 23,
-                name: "feedback",
-                icon: "el-icon-user",
-                alias: "意见反馈",
-                value: { path: "/feedback" },
-              },
-            },
-            {
-              entity: {
-                id: 24,
-                name: "leavingMessage",
-                icon: "el-icon-user-solid",
-                alias: "留言记录",
-                value: { path: "/leavingMessage" },
-              },
-            }
-          ],
-        },
+        //         value: "/user/integral",
+        //       },
+        //     },
+        //   ],
+        // },
+        // {
+        //   entity: {
+        //     id: 22,
+        //     name: "留言反馈",
+        //     icon: "el-icon-s-custom",
+        //     alias: "留言反馈",
+        //     value: { path: "/feedbackMessage" },
+        //   },
+        //   childs: [
+        //     {
+        //       entity: {
+        //         id: 23,
+        //         name: "feedback",
+        //         icon: "el-icon-user",
+        //         alias: "意见反馈",
+        //         value: { path: "/feedback" },
+        //       },
+        //     },
+        //     {
+        //       entity: {
+        //         id: 24,
+        //         name: "leavingMessage",
+        //         icon: "el-icon-user-solid",
+        //         alias: "留言记录",
+        //         value: { path: "/leavingMessage" },
+        //       },
+        //     }
+        //   ],
+        // },
       ],
     };
   },
@@ -170,6 +180,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import './styles/common.less';
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -179,6 +190,12 @@ export default {
     // height: calc(~"100vh - 16px");
     height: 100vh;
     box-shadow: 0px 0px 4px 2px rgb(0 0 0/ 7%);
+    .menu-header {
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
   .mainBox {
     width: calc(~"100% - 240px");

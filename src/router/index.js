@@ -21,9 +21,9 @@ export default new Router({
       component: () => import('@/views/dataAnalysis/index.vue'),
     },
     { //意见反馈
-      name: 'feedback',
-      path: '/feedback',
-      component: () => import('@/views/feedback')
+      name: 'demoPage',
+      path: '/demoPage',
+      component: () => import('@/views/demoPage')
     },
     { //留言板
       name: 'leavingMessage',

@@ -8,6 +8,8 @@ import store from './store/index'
 import ElementUI from 'element-ui'
 // import VCharts from 'v-charts'
 import 'element-ui/lib/theme-chalk/index.css'
+import './assets/icon/iconfont.css'
+// import '../src/styles/common.less'/
 Vue.config.productionTip = false
 Vue.use(Vuex)
 Vue.use(ElementUI)

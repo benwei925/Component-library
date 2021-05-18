@@ -154,9 +154,15 @@ export default {
   },
   mounted(){
     this.getTabelData()
+    this.ceshi()
+    console.log(typeof(this.ceshi))
     // this.userInfomation = this.$store.state.userInfo.userInfo
   },
   methods: {
+    ceshi(){
+      let addd = [1,2,3,4,5,1,2,3]
+      console.log(addd)
+    },
     // ...mapMutations(['SET_USERINFO']),
     // getInfo(){
     // },
@@ -205,17 +211,18 @@ export default {
 <style lang="less" scoped>
 </style>
 <style lang="less">
+@import '../../styles/common.less';
 header {
   padding: 24px 16px 0;
 }
 main {
   padding: 0 16px;
-}
-.el-table {
-    font-size: 12px;
-    color: #333;
-  thead th {
-    background: #F3F3F3;
+  .el-table {
+      font-size: 12px;
+      color: #333;
+    thead th {
+      background: #F3F3F3;
+    }
   }
 }
 footer .el-pagination {

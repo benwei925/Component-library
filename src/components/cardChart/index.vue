@@ -1,9 +1,10 @@
 <template>
   <div>
     <el-card class="box-card" :shadow="shadow">
-      <div class="title"><slot name="title"></slot>{{title}}</div>
+      <div class="header"><slot name="title"></slot>{{title}}</div>
       <ve-histogram :data="chartData" :width="chartWidth" :height="chartHeight" v-if="type=='histogram'"></ve-histogram>
       <ve-line :data="chartData" :width="chartWidth" :height="chartHeight" v-if="type=='line'"></ve-line>
+      <div class="footer"><slot name="footer"></slot></div>
     </el-card>
   </div>
 </template>
@@ -50,7 +51,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .box-card{
-  .title{
+  .header{
     font-size: 16px;
     font-weight: 400;
     color: #333333;

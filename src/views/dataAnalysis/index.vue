@@ -150,7 +150,7 @@ export default {
       margin-right: 0;
     }
     .el-card {
-      margin-bottom: 5px;
+      // margin-bottom: 5px;
     }
   }
 }
