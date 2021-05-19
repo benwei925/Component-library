@@ -1,6 +1,6 @@
-# stray-pet
+# Component library
 
-> A Vue.js project
+> A component encapsulation Library
 
 ## Build Setup
 
