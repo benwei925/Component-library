@@ -20,7 +20,7 @@ export default new Router({
       name: 'dataAnalysis',
       component: () => import('@/views/dataAnalysis/index.vue'),
     },
-    { //意见反馈
+    { //组件库
       name: 'demoPage',
       path: '/demoPage',
       component: () => import('@/views/demoPage')

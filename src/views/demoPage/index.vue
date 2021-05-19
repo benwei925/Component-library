@@ -1,9 +1,34 @@
 <template>
   <div>
     <header>
-      222222222222222
+
     </header>
     <main>
+      <el-row>
+        <el-col :span="12">
+          <cardChart
+            type="histogram"
+            shadow="hover"
+            :chartData="chartMapData"
+            title="柱状图"
+          >
+            <template v-slot:title><i class="el-icon-s-data"></i></template>
+            <template v-slot:footer></template>
+          </cardChart>
+        </el-col>
+        <el-col :span="12">
+          <cardChart
+            shadow="hover"
+            :chartData="chartData"
+            title="【图表标题】"
+          >
+            <template v-slot:title>【头部插槽，可自定义图标】</template>
+            <template v-slot:footer>底部插槽，自定义内容</template>
+          </cardChart>
+        </el-col>
+      </el-row>
+      <ctable :selection="true" :sortable="true" :sortArr="['date']">
+      </ctable>
     </main>
     <footer>
     </footer>
@@ -11,11 +36,36 @@
 </template>
 <script>
 // import { mapState, mapMutations } from 'vuex'
+import cardChart from "../../components/cardChart/index.vue";
+import ctable from "../../components/ctable/index.vue"
 export default {
-  components:{  },
+  components:{ cardChart, ctable },
   data() {
     return {
       crumbs: [{ name: '组件示例', path: '' }],
+      chartMapData: {
+        columns: ["位置", "领养数", "性别"],
+        rows: [
+          { 位置: "吉林", 领养数: 123, 性别: 123 },
+          { 位置: "北京", 领养数: 1223, 性别: 2123 },
+          { 位置: "上海", 领养数: 2123, 性别: 1243 },
+          { 位置: "浙江", 领养数: 4123, 性别: 5123 },
+          { 位置: "河南", 领养数: 6223, 性别: 3123 },
+          { 位置: "山东", 领养数: 9123, 性别: 5243 },
+          { 位置: "海南", 领养数: 3123, 性别: 1153 },
+        ],
+      },
+      chartData: {
+        columns: ["日期", "折线1", "折线2", "折线3"],
+        rows: [
+          { 日期: "1/1", 折线1: 1393, 折线2: 93, 折线3: 100 },
+          { 日期: "1/2", 折线1: 3530, 折线2: 1230, 折线3: 200 },
+          { 日期: "1/3", 折线1: 2923, 折线2: 2003, 折线3: 400 },
+          { 日期: "1/4", 折线1: 1723, 折线2: 4003, 折线3: 800 },
+          { 日期: "1/5", 折线1: 3792, 折线2: 1662, 折线3: 1600 },
+          { 日期: "1/6", 折线1: 4593, 折线2: 3333, 折线3: 3200 },
+        ],
+      },
     };
   },
   created () {
@@ -37,6 +87,9 @@ header {
 }
 
 main {
+  .el-table thead th {
+    background: #F3F3F3;
+  }
 }
 
 footer {

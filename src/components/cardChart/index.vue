@@ -56,7 +56,7 @@ export default {
     font-weight: 400;
     color: #333333;
     line-height: 22px;
-    margin-top: 4px;
+    margin-bottom: 10px;
   }
 }
 </style>
