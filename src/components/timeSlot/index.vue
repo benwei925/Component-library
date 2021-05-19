@@ -452,6 +452,8 @@ ul {
           }
           &:not(.active):not(.choosed):nth-of-type(2n) {
             background: #f0f1f2;
+
+
           }
           &.active,
           &.choosed {

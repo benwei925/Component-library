@@ -25,10 +25,10 @@ export default new Router({
       path: '/demoPage',
       component: () => import('@/views/demoPage')
     },
-    { //留言板
-      name: 'leavingMessage',
-      path: '/leavingMessage',
-      component: () => import('@/views/leavingMessage')
+    { //todolist
+      name: 'todolist',
+      path: '/todolist',
+      component: () => import('@/views/todolist')
     },
   ]
 })

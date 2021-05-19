@@ -57,6 +57,15 @@ export default {
             value: { path: "/demoPage" },
           },
         },
+        {
+          entity: {
+            id: 3,
+            name: "todolist",
+            icon: "el-icon-notebook-1",
+            alias: "待办事项",
+            value: { path: "/todolist" },
+          },
+        },
         // {
         //   entity: {
         //     id: 1,
@@ -85,87 +94,7 @@ export default {
         //     }
         //   ],
         // },
-        // {
-        //   //一级
-        //   entity: {
-        //     id: 6,
-        //     name: "userManage",
-        //     icon: "el-icon-news",
-        //     alias: "宠物信息管理",
-        //   },
-        //   //二级
-        //   childs: [
-        //     {
-        //       entity: {
-        //         id: 7,
-        //         name: "accountManage",
-        //         icon: "el-icon-phone-outline\r\n",
-        //         alias: "帐号管理",
-        //         value: "",
-        //       },
-        //       //三级
-        //       childs: [
-        //         {
-        //           entity: {
-        //             id: 14,
-        //             name: "emailManage",
-        //             icon: "el-icon-sold-out\r\n",
-        //             alias: "邮箱管理",
-        //             value: "/content/email",
-        //           },
-        //         },
-        //         {
-        //           entity: {
-        //             id: 13,
-        //             name: "passManage",
-        //             icon: "el-icon-service\r\n",
-        //             alias: "密码管理",
-        //             value: "/content/pass",
-        //           },
-        //         },
-        //       ],
-        //     },
-        //     {
-        //       entity: {
-        //         id: 8,
-        //         name: "integralManage",
-        //         icon: "el-icon-picture",
-        //         alias: "积分管理",
-
-        //         value: "/user/integral",
-        //       },
-        //     },
-        //   ],
-        // },
-        // {
-        //   entity: {
-        //     id: 22,
-        //     name: "留言反馈",
-        //     icon: "el-icon-s-custom",
-        //     alias: "留言反馈",
-        //     value: { path: "/feedbackMessage" },
-        //   },
-        //   childs: [
-        //     {
-        //       entity: {
-        //         id: 23,
-        //         name: "feedback",
-        //         icon: "el-icon-user",
-        //         alias: "意见反馈",
-        //         value: { path: "/feedback" },
-        //       },
-        //     },
-        //     {
-        //       entity: {
-        //         id: 24,
-        //         name: "leavingMessage",
-        //         icon: "el-icon-user-solid",
-        //         alias: "留言记录",
-        //         value: { path: "/leavingMessage" },
-        //       },
-        //     }
-        //   ],
-        // },
+        //}
       ],
     };
   },
