@@ -51,6 +51,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .box-card{
+  margin: 10px 10px 10px 0;
   .header{
     font-size: 16px;
     font-weight: 400;

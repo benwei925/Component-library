@@ -12,18 +12,17 @@
       <NavMenu :navMenus="menuData"></NavMenu>
     </el-menu>
     <div class="mainBox">
-        <breadCrumb></breadCrumb>
+      <breadCrumb></breadCrumb>
       <div class="main-box">
         <router-view />
       </div>
     </div>
-
   </div>
 </template>
 
 <script>
 import NavMenu from "./components/navMenu/index.vue";
-import breadCrumb from '@/components/breadCrumb'
+import breadCrumb from "@/components/breadCrumb";
 export default {
   name: "App",
   components: { NavMenu, breadCrumb },
@@ -180,7 +179,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import './styles/common.less';
+@import "./styles/common.less";
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -202,12 +201,14 @@ export default {
     // min-height: 100vh;
     min-height: calc(~"100vh - 46px");
     border-radius: 4px;
-        padding: 29px 20px 0;
+    padding: 29px 20px 0;
     .main-box {
       // padding: 20px 0;
       // margin: 0 20px;
-    // background: rgb(247,249,253);
-    box-shadow: 0px 2px 10px 2px #e5e5e5;
+      // background: rgb(247,249,253);
+      height: calc(~"100vh - 66px");
+      overflow-y: scroll;
+      box-shadow: 0px 2px 10px 2px #e5e5e5;
       // width: calc(~"100% - 200px");
     }
   }

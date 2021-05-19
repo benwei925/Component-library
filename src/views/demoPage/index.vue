@@ -1,8 +1,6 @@
 <template>
   <div>
-    <header>
-
-    </header>
+    <header></header>
     <main>
       <el-row>
         <el-col :span="12">
@@ -13,36 +11,38 @@
             title="柱状图"
           >
             <template v-slot:title><i class="el-icon-s-data"></i></template>
-            <template v-slot:footer></template>
+            <template v-slot:footer>柱状图</template>
           </cardChart>
         </el-col>
         <el-col :span="12">
-          <cardChart
-            shadow="hover"
-            :chartData="chartData"
-            title="【图表标题】"
-          >
+          <cardChart shadow="hover" :chartData="chartData" title="【图表标题】">
             <template v-slot:title>【头部插槽，可自定义图标】</template>
             <template v-slot:footer>底部插槽，自定义内容</template>
           </cardChart>
         </el-col>
       </el-row>
-      <ctable :selection="true" :sortable="true" :sortArr="['date']">
-      </ctable>
+      <el-row>
+        <el-col :span="12">
+          <ctable :selection="true" :sortable="true" :sortArr="['date']"> </ctable>
+        </el-col>
+      </el-row>
+      <el-row class="borderRownone">
+        <time-Slot ref="timeSlot"></time-Slot>
+      </el-row>
     </main>
-    <footer>
-    </footer>
+    <footer></footer>
   </div>
 </template>
 <script>
 // import { mapState, mapMutations } from 'vuex'
 import cardChart from "../../components/cardChart/index.vue";
-import ctable from "../../components/ctable/index.vue"
+import ctable from "../../components/ctable/index.vue";
+import timeSlot from "../../components/timeSlot/index.vue"
 export default {
-  components:{ cardChart, ctable },
+  components: { cardChart, ctable, timeSlot },
   data() {
     return {
-      crumbs: [{ name: '组件示例', path: '' }],
+      crumbs: [{ name: "组件示例", path: "" }],
       chartMapData: {
         columns: ["位置", "领养数", "性别"],
         rows: [
@@ -66,17 +66,20 @@ export default {
           { 日期: "1/6", 折线1: 4593, 折线2: 3333, 折线3: 3200 },
         ],
       },
+
     };
   },
-  created () {
-    this.$store.commit('SET_CRUMB', this.crumbs)
+  created() {
+    this.$store.commit("SET_CRUMB", this.crumbs);
   },
-  computed:{
+  computed: {
     // ...mapState(['userInfo'])
   },
-  mounted(){
-  },
+  mounted() {},
   methods: {
+    submit(){
+      this.$refs.timeSlot.getData()
+    }
   },
 };
 </script>
@@ -87,12 +90,18 @@ header {
 }
 
 main {
+  padding: 20px;
   .el-table thead th {
-    background: #F3F3F3;
+    background: #f3f3f3;
+  }
+  .borderRownone {
+    display: flex;
+    align-items: center;
   }
 }
 
 footer {
 }
+
 </style>
 
