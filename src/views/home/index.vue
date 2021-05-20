@@ -212,32 +212,35 @@ export default {
 </style>
 <style lang="less">
 @import '../../styles/common.less';
-header {
-  padding: 24px 16px 0;
-}
-main {
-  padding: 0 16px;
-  .el-table {
-      font-size: 12px;
-      color: #333;
-    thead th {
-      background: #F3F3F3;
+.content{
+  header {
+    padding: 24px 16px 0;
+  }
+  main {
+    padding: 0 16px;
+    .el-table {
+        font-size: 12px;
+        color: #333;
+      thead th {
+        background: #F3F3F3;
+      }
     }
   }
+  footer .el-pagination {
+    height: 64px;
+    padding: 18px 20px;
+    text-align: right;
+    background-color: #fff;
+    box-sizing: border-box;
+    font-weight: 400;
+  }
+  .operation {
+    cursor: pointer;
+    font-size: 12px;
+    color: #eda063;
+  }
 }
-footer .el-pagination {
-  height: 64px;
-  padding: 18px 20px;
-  text-align: right;
-  background-color: #fff;
-  box-sizing: border-box;
-  font-weight: 400;
-}
-.operation {
-  cursor: pointer;
-  font-size: 12px;
-  color: #eda063;
-}
+
 /* Chrome浏览器 */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
