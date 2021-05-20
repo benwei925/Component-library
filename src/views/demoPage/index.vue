@@ -22,8 +22,10 @@
         </el-col>
       </el-row>
       <el-row>
-        <el-col :span="12">
-          <ctable :selection="true" :sortable="true" :sortArr="['date']"> </ctable>
+        <el-col :span="24">
+          <ctable :tableData="tableData" :columns="columns" tooltipEffect="dark" :total="100" :stripe="true">
+            <span slot="pagination-slot">【分页插槽，需在layout中列出slot】</span>
+          </ctable>
         </el-col>
       </el-row>
       <el-row class="borderRownone">
@@ -43,6 +45,65 @@ export default {
   data() {
     return {
       crumbs: [{ name: "组件示例", path: "" }],
+      tableData:[
+        {
+          // date: '2016-05-02',
+          name: '李笑笑',
+          address: '杭州市萧山区',
+          phone: '12345678901'
+        }, {
+          date: '2016-05-04',
+          // name: '王小虎',
+          address: '杭州市西湖区',
+          phone: '16666666666'
+        }, {
+          // date: '2016-05-01',
+          name: '小红花',
+          address: '杭州市拱墅区杭州市拱墅区杭州市拱墅区杭州市拱墅区杭州市拱墅区杭州市拱墅区杭州市拱墅区杭州市拱墅区杭州市拱墅区杭州市拱墅区杭州市拱墅区杭州市拱墅区杭州市拱墅区',
+          // phone: '12345678901'
+        }, {
+          date: '2016-05-03',
+          // name: '王小虎',
+          address: '杭州市余杭区',
+          phone: '12222333556'
+        }
+      ],
+      columns:[
+        {
+          type:'selection'
+        },
+        {
+          title:'序号',
+          type:'index',
+          index: 20
+        },
+        // {
+        //   title:'拓展',
+        //   type:'expand'
+        // },
+        {
+          title: "时间",
+          key: "date",
+          // sortable: true,
+          width:'120',
+          resizable:true
+        },
+        {
+          title: "名称",
+          key: "name",
+          width: "120",
+        },
+        {
+          title: "地点",
+          key: "address",
+          showTooltip:true,
+        },
+        {
+          title: "联系方式",
+          key: "phone",
+          fixed:'right',
+        }
+      ],
       chartMapData: {
         columns: ["位置", "领养数", "性别"],
         rows: [
